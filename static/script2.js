@@ -59,6 +59,6 @@ var item = [
       product.innerHTML = "Vehical:   " + value ;
       freq.onchange = function() {
       servings.innerHTML = "Travels: " + s;
-      results.innerHTML = "Your annual consumption of " + value.toLowerCase() + " is contributing to " + (freq.value * 52 * emission).toFixed(2)+ " kg to your greenhouse gas emissions.";
+      results.innerHTML = "Your annual usage of " + value.toLowerCase() + " is contributing to " + (freq.value * 52 * emission).toFixed(2)+ " kg to your greenhouse gas emissions.";
   };
   }

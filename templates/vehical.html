@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Calculator</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
 <div class="row">
     <div class="column left text">
     <h1 style="margin-bottom: 60px">How does your food impact the environment?</h1>
         <h2 id="selected-food" >Product:</h2>
-        <h2>How many times per week do you have it?</h2>
+        <h2>How many times per week do you use it?</h2>
         <select style="width:100px;position: relative;" id="freq">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -35,12 +23,11 @@
         <div class="header">
             <h1 id="food">Food</h1>
         </div>
-        <div class="shelf-background">
+        <div class="shelf-background1">
             <div class="items"></div>
         </div>
-        <script src="script2.js"> </script>
+        <script src="{{ url_for('static', filename = 'script2.js')}}"> </script>
 
     </div>
 </div>
-</body>
-</html>
+{% endblock content %}

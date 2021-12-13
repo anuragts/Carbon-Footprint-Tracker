@@ -59,6 +59,11 @@ body {
   background-color: #fff5ea;
   height: 600px;
 }
+.shelf-background1 {
+  background-color: #fff5ea;
+  height: 200px;
+}
+
 
 .items {
   padding-top: 30px;

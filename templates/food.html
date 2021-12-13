@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
+<style>
+    #freq {
+        background-color: #cedebd;
+        font-size: 1.9em;
+    }
+</style>
 <div class="row">
     <div class="column left text">
-    <h1 style="margin-bottom: 60px">How does your food impact the environment?</h1>
-        <h2 id="selected-food" >Product:</h2>
+        <h1 style="margin-bottom: 60px">How does your food impact the environment?</h1>
+        <h2 id="selected-food">Product:</h2>
         <h2>How many times per week do you have it?</h2>
         <select style="width:100px;position: relative;" id="freq">
             <option value="0">0</option>

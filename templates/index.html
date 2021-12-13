@@ -1,3 +1,190 @@
 {% extends "base.html" %}
 {% block content %}
+<style>
+    .tit {
+        margin-top: 15vh;
+        text-align: center;
+        font-size: 15vh;
+        font-family: 'Inconsolata', monospace;
+    }
+
+    .stit {
+        /* margin-top: 5vh; */
+        text-align: center;
+        font-size: 5vh;
+        font-family: 'Inconsolata', monospace;
+        color: rgb(95, 92, 92);
+    }
+
+    .cbt {
+        text-align: center;
+    }
+
+    .bt1 {
+        margin-top: 5vh;
+        text-align: center;
+        padding: 10px 15px;
+        font-size: 4vh;
+        font-family: 'Inconsolata', monospace;
+        color: rgb(185, 176, 176);
+        background-color: #333;
+        border: none;
+    }
+
+    .bt1:hover {
+        background-color: rgb(146, 142, 142);
+        color: #333;
+    }
+
+    .sec1 {
+        margin-top: 35vh;
+        background-color: #333;
+    }
+
+    .title1 {
+        padding-top: 200px;
+        text-align: center;
+        font-size: 8vh;
+        font-family: 'Inconsolata', monospace;
+        color: rgb(158, 153, 153);
+    }
+
+    .dec {
+        margin-top: 5vh;
+        text-align: center;
+        font-size: 4vh;
+        font-family: 'Barlow', sans-serif;
+        color: rgb(233, 218, 218);
+    }
+
+    .title2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 40px;
+        text-align: center;
+        font-size: 5vh;
+        font-family: 'Inconsolata', monospace;
+        color: rgb(206, 194, 194);
+        /* padding-bottom: 120px; */
+    }
+
+    .title21 {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 40px;
+        text-align: center;
+        font-size: 5vh;
+        font-family: 'Inconsolata', monospace;
+        color: rgb(206, 194, 194);
+        padding-bottom: 120px;
+    }
+
+    .sec2 {
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 30px;
+        margin-top: 12vh;
+        color: #333;
+    }
+
+    .btns1 {
+        text-align: center;
+    }
+
+    .btns2 {
+        text-align: center;
+    }
+
+    .btns11 {
+        text-align: center;
+        margin-top: 5vh;
+        padding: 10px 15px;
+        font-size: 4vh;
+        font-family: 'Inconsolata', monospace;
+        color: rgb(185, 176, 176);
+        background-color: #333;
+        border: none;
+    }
+
+    .btns11:hover {
+        background-color: rgb(146, 142, 142);
+        color: #333;
+    }
+
+    .btns12 {
+        text-align: center;
+        margin-top: 5vh;
+        padding: 10px 15px;
+        font-size: 4vh;
+        font-family: 'Inconsolata', monospace;
+        color: rgb(185, 176, 176);
+        background-color: #333;
+        border: none;
+        margin-bottom: 100px;
+    }
+
+    .btns12:hover {
+        background-color: rgb(146, 142, 142);
+        color: #333;
+    }
+
+    .title11 {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 40px;
+        text-align: center;
+        font-size: 10vh;
+        font-family: 'Inconsolata', monospace;
+        color: #557174;
+        /* padding-bottom: 120px; */
+    }
+    .ftr{
+        font-size: 3vh;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        background-color: #333;
+        color: rgb(146, 142, 142);
+    }
+    .ftr a{
+        color: rgb(146, 142, 142);
+        text-decoration: none;
+    }
+</style>
+
+<div class="tit">Carbon Footprint</div>
+<div class="stit">The increasing threat!!</div>
+
+
+<div class="cbt"> <a href="{{ url_for('food') }}"> <button class="bt1">Calculate-Footprint</button> </a> </div>
+
+<section class="sec1">
+
+    <div class="title1" id="title1">How Do Carbon Emissions Affect the Environment?</div>
+    <div class="dec">Climate change is altering our planet, causing extreme weather events like tropical storms,
+        wildfires, severe droughts and heat waves, negatively affecting crop production, causing disruption to animals'
+        natural habitats, and more. Because the emission of greenhouse gases is the main perpetrator that causes global
+        warming (and therefore climate change), it's important to understand how carbon and other greenhouse gas
+        emissions affect the environment. After all, if we don't understand the impact of carbon emissions, then how can
+        we change what we're doing and save the planet?</div>
+    <div class="title2">The Solution is - <br> We can track our carbon Footprint of eating and vehical emmision and
+        reduce it.</div>
+
+
+    <div class="title21">So with this carbon footprint calculator you can calculte the corbon of your vehical (per year)
+        and carbon emmision by food (per year).</div>
+</section>
+<section class="sec2">
+    <div class="title11">
+        Try it out!
+    </div>
+    <div class="btns1"><a href="{{ url_for('vehical') }}"><button class="btns11">Vehical-Footprint</button></a></div>
+    <div class="btns2"><a href="{{ url_for('food') }}"><button class="btns12">Food-Footprint</button></a></div>
+</section>
+<footer>
+    <div class="ftr">Made by <a href="https://twitter.com/theanuragdev"> Anurag </a></div>
+</footer>
+
+
 {% endblock content %}

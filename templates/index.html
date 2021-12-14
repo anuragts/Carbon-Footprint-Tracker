@@ -1,25 +1,24 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <style>
     .tit {
         margin-top: 15vh;
         text-align: center;
         font-size: 15vh;
-        font-family: 'Inconsolata', monospace;
+        font-family: 'comfortaa', monospace;
     }
-
+    
     .stit {
         /* margin-top: 5vh; */
         text-align: center;
         font-size: 5vh;
-        font-family: 'Inconsolata', monospace;
+        font-family: 'comfortaa', monospace;
         color: rgb(95, 92, 92);
     }
-
+    
     .cbt {
         text-align: center;
     }
-
+    
     .bt1 {
         margin-top: 5vh;
         text-align: center;
@@ -29,117 +28,130 @@
         color: rgb(185, 176, 176);
         background-color: #333;
         border: none;
+        border-radius: 15px;
     }
-
+    
     .bt1:hover {
         background-color: rgb(146, 142, 142);
         color: #333;
     }
-
+    
     .sec1 {
-        margin-top: 35vh;
+        margin-top: 25vh;
         background-color: #333;
     }
-
+    
     .title1 {
         padding-top: 200px;
         text-align: center;
-        font-size: 8vh;
+        font-size: 6vh;
         font-family: 'Inconsolata', monospace;
         color: rgb(158, 153, 153);
     }
-
+    
     .dec {
-        margin-top: 5vh;
+        margin-top: 2vh;
         text-align: center;
-        font-size: 4vh;
+        font-size: 2.8vh;
         font-family: 'Barlow', sans-serif;
         color: rgb(233, 218, 218);
+        padding: 10% auto;
     }
-
+    
     .title2 {
         margin-left: 10px;
         margin-right: 10px;
         padding-top: 40px;
         text-align: center;
-        font-size: 5vh;
+        font-size: 3.5vh;
         font-family: 'Inconsolata', monospace;
         color: rgb(206, 194, 194);
+        margin-top: 20px;
+        padding: 1%;
+        background-color: rgba(255, 255, 255, 0.192);
+        border-radius: 50px;
         /* padding-bottom: 120px; */
     }
-
+    
     .title21 {
         margin-left: 10px;
         margin-right: 10px;
         padding-top: 40px;
         text-align: center;
-        font-size: 5vh;
+        font-size: 3.5vh;
         font-family: 'Inconsolata', monospace;
         color: rgb(206, 194, 194);
         padding-bottom: 120px;
     }
-
+    
     .sec2 {
         text-align: center;
         margin-left: 10px;
         margin-right: 10px;
         font-size: 30px;
-        margin-top: 12vh;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
         color: #333;
     }
-
-    .btns1 {
+    
+    .btns {
         text-align: center;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
     }
-
-    .btns2 {
-        text-align: center;
-    }
-
+    
     .btns11 {
         text-align: center;
-        margin-top: 5vh;
-        padding: 10px 15px;
+        padding: 15px 20px;
         font-size: 4vh;
-        font-family: 'Inconsolata', monospace;
-        color: rgb(185, 176, 176);
+        /* font-family: 'Inconsolata', monospace; */
+        color: #ffffff;
         background-color: #333;
         border: none;
+        /* height: rem; */
+        width: 23rem;
+        margin-right: 3vh;
+        border-radius: 20px;
+        box-shadow: #333;
     }
-
+    
     .btns11:hover {
-        background-color: rgb(146, 142, 142);
-        color: #333;
+        background-color: #a1a1a1;
+        color: rgb(0, 0, 0);
     }
-
+    
     .btns12 {
         text-align: center;
-        margin-top: 5vh;
-        padding: 10px 15px;
+        padding: 15px 15px;
         font-size: 4vh;
-        font-family: 'Inconsolata', monospace;
-        color: rgb(185, 176, 176);
+        /* font-family: 'Inconsolata', monospace; */
+        color: #ffffff;
         background-color: #333;
         border: none;
-        margin-bottom: 100px;
+        /* height: rem; */
+        width: 23rem;
+        margin-left: 3vh;
+        border-radius: 20px;
+        box-shadow: #333;
     }
-
+    
     .btns12:hover {
-        background-color: rgb(146, 142, 142);
-        color: #333;
+        background-color: #a1a1a1;
+        color: rgb(0, 0, 0);
     }
-
+    
     .title11 {
         margin-left: 10px;
         margin-right: 10px;
-        padding-top: 40px;
+        padding-top: 10px;
         text-align: center;
         font-size: 10vh;
         font-family: 'Inconsolata', monospace;
         color: #557174;
         /* padding-bottom: 120px; */
     }
-    .ftr{
+    
+    .ftr {
         font-size: 3vh;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -147,43 +159,54 @@
         background-color: #333;
         color: rgb(146, 142, 142);
     }
-    .ftr a{
+    
+    .ftr a {
         color: rgb(146, 142, 142);
         text-decoration: none;
     }
 </style>
 
-<div class="tit">Carbon Pollution</div>
-<div class="stit">The increasing threat!!</div>
+<div class="tit">Carbon Footprint</div>
+<div class="stit">The increasing threat !!</div>
 
 
-<div class="cbt"> <a href="{{ url_for('food') }}"> <button class="bt1">Calculate-Footprint</button> </a> </div>
+<div class="cbt">
+    <a href="{{ url_for('food') }}"> <button class="bt1">Calculate-Footprint</button> </a>
+</div>
 
 <section class="sec1">
-
-    <div class="title1" id="title1">How Do Carbon Emissions Affect the Environment?</div>
-    <div class="dec">Climate change is altering our planet, causing extreme weather events like tropical storms,
-        wildfires, severe droughts and heat waves, negatively affecting crop production, causing disruption to animals'
-        natural habitats, and more. Because the emission of greenhouse gases is the main perpetrator that causes global
-        warming (and therefore climate change), it's important to understand how carbon and other greenhouse gas
-        emissions affect the environment. After all, if we don't understand the impact of carbon emissions, then how can
-        we change what we're doing and save the planet?</div>
-    <div class="title2">The Solution is - <br> We can track our carbon Footprint of eating and vehical emission and
-        reduce it.</div>
+    <div style="width: 82%; margin: auto;">
+        <div class="title1" id="title1">How Do Carbon Emissions Affect the Environment?</div>
+        <div class="dec">Climate change is altering our planet, causing extreme weather events like tropical storms, wildfires, severe droughts and heat waves, negatively affecting crop production, causing disruption to animals' natural habitats, and more. Because the
+            emission of greenhouse gases is the main perpetrator that causes global warming (and therefore climate change), it's important to understand how carbon and other greenhouse gas emissions affect the environment. After all, if we don't understand
+            the impact of carbon emissions, then how can we change what we're doing and save the planet?</div>
+        <div class="title2">
+            <span style="font-size: 4.5vh;"> <u style="height: 1px;padding-top: 3px;"> The Solution is - </u> </span><br> We can track our carbon Footprint of eating and vehicle emission and reduce it. <br> So with this carbon footprint calculator you
+            can calculate the carbon of your food (per year) and carbon emmision from vehicle (per year).</div>
 
 
-    <div class="title21">So with this carbon footprint calculator you can calculate the carbon of your vehical (per year)
-        and carbon emmision by food (per year).</div>
+        <div class="title21"></div>
+    </div>
 </section>
 <section class="sec2">
     <div class="title11">
         Try it out!
     </div>
-    <div class="btns1"><a href="{{ url_for('food') }}"><button class="btns11">Food-Footprint</button></a></div>
-    <div class="btns2"><a href="{{ url_for('vehical') }}"><button class="btns12">Vehical-Footprint</button></a></div>
+    <div class="btns">
+        <a href="{{ url_for('food') }}">
+            <button class="btns11">
+                Food Footprint
+            </button>
+        </a>
+        <a href="{{ url_for('vehical') }}">
+            <button class="btns12">
+                Vehicle Footprint
+            </button>
+        </a>
+    </div>
 </section>
 <footer>
-    <div class="ftr">Made by <a href="https://twitter.com/theanuragdev"> Anurag </a></div>
+    <div class="ftr">Made by <a href="https://twitter.com/theanuragdev"> Anurag & Joshith </a></div>
 </footer>
 
 

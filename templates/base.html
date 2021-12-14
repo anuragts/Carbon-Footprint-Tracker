@@ -2,64 +2,64 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carbon Calculator</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css')}}">
-  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename = 'favicon2.ico')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename = 'favicon2.ico')}}">
 
 
-  <style>
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-    }
-
-    li {
-      float: left;
-    }
-
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 22px;
-
-    }
-
-    li a:hover:not(.active) {
-      background-color: rgb(146, 142, 142);
-      color: #333;
-      text-decoration: none;
-    }
-
-    .active {
-      background-color: #04AA6D;
-    }
-  </style>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 22px;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: rgb(146, 142, 142);
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .active {
+            background-color: #04AA6D;
+        }
+    </style>
 </head>
 
 <body>
 
-  <ul>
-    <li><a href="{{ url_for('index') }}">Home</a></li>
-    <li><a href="{{ url_for('food') }}">Food</a></li>
-    <li><a href="{{ url_for('vehical') }}">Vehical</a></li>
-  </ul>
-  {% block content %} {% endblock %}
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('food') }}">Food</a></li>
+        <li><a href="{{ url_for('vehical') }}">Vehical</a></li>
+    </ul>
+    {% block content %} {% endblock %}
 </body>
 
 </html>
